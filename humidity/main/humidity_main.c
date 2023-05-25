@@ -17,7 +17,7 @@ void temperature_task(void *arg)
     {
         int humidity = 0;
         int temperature = 0;
-        if (dht_read_data(DHT_TYPE_DHT22, DHT_GPIO, &humidity, &temperature) == ESP_OK) {
+        if (dht_read_data(DHT_TYPE_DHT11, DHT_GPIO, &humidity, &temperature) == ESP_OK) {
             // e.g. in dht22, 604 = 60.4%, 252 = 25.2 C
             // If you want to print float data, you should run `make menuconfig`
             // to enable full newlib and call dht_read_float_data() here instead
